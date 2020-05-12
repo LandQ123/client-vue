@@ -1,0 +1,61 @@
+{
+    "name": "node-vue",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "serve": "vue-cli-service serve",
+        "buildViews": "node build/buildViews.js",
+        "buildViews:landq": "cross-env CLIENT=landq node build/buildViews.js",
+        "dev": "npm run buildViews && npm run serve",
+        "dev:landq": "npm run buildViews:landq && npm run serve",
+        "build": "npm run buildViews && vue-cli-service build",
+        "build:landq": "npm run buildViews:landq && vue-cli-service build",
+        "lint": "vue-cli-service lint"
+    },
+    "dependencies": {
+        "core-js": "^3.6.4",
+        "cross-env": "^7.0.2",
+        "element-ui": "^2.13.1",
+        "json-templater": "^1.2.0",
+        "vue": "^2.6.11",
+        "vue-router": "^3.1.6",
+        "vuex": "^3.1.3"
+    },
+    "devDependencies": {
+        "@vue/cli-plugin-babel": "^4.3.0",
+        "@vue/cli-plugin-eslint": "^4.3.0",
+        "@vue/cli-plugin-router": "^4.3.0",
+        "@vue/cli-plugin-vuex": "^4.3.0",
+        "@vue/cli-service": "^4.3.0",
+        "@vue/eslint-config-prettier": "^6.0.0",
+        "babel-eslint": "^10.1.0",
+        "chalk": "^4.0.0",
+        "eslint": "^6.7.2",
+        "eslint-plugin-prettier": "^3.1.1",
+        "eslint-plugin-vue": "^6.2.2",
+        "prettier": "^1.19.1",
+        "sass": "^1.26.3",
+        "sass-loader": "^8.0.2",
+        "vue-template-compiler": "^2.6.11"
+    },
+    "eslintConfig": {
+        "root": true,
+        "env": {
+            "node": true
+        },
+        "extends": [
+            "plugin:vue/essential",
+            "eslint:recommended",
+            "@vue/prettier"
+        ],
+        "parserOptions": {
+            "parser": "babel-eslint"
+        },
+        "rules": {}
+    },
+    "browserslist": [
+        "> 1%",
+        "last 2 versions",
+        "not dead"
+    ]
+}
