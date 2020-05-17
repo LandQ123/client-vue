@@ -4,10 +4,12 @@
 const Layout = resolve => require(['@/layout/index'], resolve)
 const Home = resolve => require(['@/views/home'], resolve)
 const Login = resolve => require(['@/views/login'], resolve)
+const CustomerList = resolve => require(['@/views/landq/customerList'], resolve)
 
 // 导出所有页面
 export {
-     Layout,
- Home,
- Login
+    Layout,
+Home,
+Login,
+CustomerList
 }

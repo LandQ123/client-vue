@@ -1,8 +1,8 @@
 import { CustomerList } from '../../importViews'
-export default {
+export default [{
     path: '/customerList',
     meta: {
         name: 'customerList'
     },
     component: CustomerList,
-}
+}]

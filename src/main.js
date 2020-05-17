@@ -7,6 +7,8 @@ import 'element-ui/lib/theme-chalk/index.css';
 
 Vue.config.productionTip = false;
 Vue.use(ElementUI)
+console.log(process.env.NODE_ENV)
+Vue.prototype.$apiOrigin = process.env.NODE_ENV === 'development' ? '/api' : 'http://127.0.0.1:8000'
 
 new Vue({
     router,

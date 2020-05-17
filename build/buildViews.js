@@ -64,7 +64,7 @@ Object.keys(useViews).forEach(name => {
             name: name,
             path: useViews[name]
         }))
-        importAllViewsNameArr.push(` ${name}`)
+        importAllViewsNameArr.push(`${name}`)
     })
     // 生成主模板
 console.log(useViews)
@@ -90,7 +90,7 @@ export default {
     meta: {
         name: '首页'
     },
-    redirect: '/home',
+    redirect: '/login',
     component: Layout,
     children: [
         {{list}}
@@ -118,7 +118,7 @@ Object.keys(useRouters).forEach(name => {
             name: name,
             path: useRouters[name]
         }))
-        importAllRoutersNameArr.push(`  ${name}`)
+        importAllRoutersNameArr.push(`...${name}`)
     })
     // 生成主模板
 let importMainRouterTemplate = render(CLIENT_ROUTER_MAIN_TEMPLATE, {

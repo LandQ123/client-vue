@@ -2,15 +2,17 @@
 
     import { Layout } from './importViews.js';
 import BaseRouter from './standerd/baseRouter.js';
+import CustomerList from './client/landq/customerList.js';
 
 export default {
     path: '/',
     meta: {
         name: '首页'
     },
-    redirect: '/home',
+    redirect: '/login',
     component: Layout,
     children: [
-          BaseRouter
+        ...BaseRouter,
+...CustomerList
     ]
 }
