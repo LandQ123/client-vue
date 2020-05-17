@@ -1,10 +1,9 @@
 let express = require('express')
 let app = express()
-app.use(express.static('www')).listen(8000, () => {
+app.use(express.static('web')).listen(8000, () => {
     console.log('服务在8000端口开启')
 })
 let list = []
-let listM = []
 for (let index = 0; index < 20; index++) {
     list.push({
         "id": index,

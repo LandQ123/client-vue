@@ -1,1 +1,1 @@
-{"clientName":"landq","clientFullName":"客户landq","clientSystemName":"系统名称","version":"1.0.0","packageTime":"2020-5-17 21:07:54"}
+{"clientName":"landq","clientFullName":"客户landq","clientSystemName":"系统名称","version":"1.0.0","packageTime":"2020-5-17 21:22:38"}
