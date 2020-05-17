@@ -48,6 +48,7 @@
 										<div class="checkbox-wrapper">
 											<div class="inner">
 												<el-checkbox v-model="item.checked"></el-checkbox>
+												{{item.id}}
 											</div>
 										</div>
 										<div class="news-title">
@@ -259,6 +260,7 @@ export default {
 		},
 		handleSizeChange(size) {
 			console.log(size);
+			this.pagination.currentPage = 1
 			this.pagination.pageSize = size;
 			this.getNewList();
 		},
