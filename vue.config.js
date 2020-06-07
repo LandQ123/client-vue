@@ -1,9 +1,9 @@
 const IS_PROD = ["production", "prod"].includes(process.env.NODE_ENV);
-
+const DIST_NAME = process.env.CLIENT || 'standerd'
 module.exports = {
     publicPath: IS_PROD ? './' : "./", // 默认'/'，部署应用包时的基本 URL
     lintOnSave: false,
-    outputDir: 'localServer/web',
+    outputDir: `localServer/web/dist_${DIST_NAME}`,
     runtimeCompiler: true, // 是否使用包含运行时编译器的 Vue 构建版本
     productionSourceMap: !IS_PROD, // 生产环境的 source map
     parallel: require("os").cpus().length > 1,

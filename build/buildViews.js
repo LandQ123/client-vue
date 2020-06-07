@@ -1,4 +1,3 @@
-console.log(process.env.CLIENT)
 const fs = require('fs');
 const path = require('path');
 const endOfLine = require('os').EOL;
@@ -6,10 +5,11 @@ const render = require('json-templater/string'); // 模板渲染
 const chalk = require('chalk'); // 控制台打印带颜色信息
 
 // 获取标准版配置
-let { STANDERD_IMPORT, STANDERD_ROUTERS } = require('./standerd')
+const { STANDERD_IMPORT, STANDERD_ROUTERS } = require('./standerd')
 
 // 获取客制化配置
-let CLIENT = process.env.CLIENT || ''
+const CLIENT = process.env.CLIENT || ''
+console.log(CLIENT)
 if (CLIENT) {
     var { CLIENT_IMPORT, CLIENT_ROUTERS } = require(`./client/${CLIENT}`)
 } else {
